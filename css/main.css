@@ -3,3 +3,22 @@
   padding: 0;
   box-sizing: border-box;
 }
+
+h1 {
+  text-align: center;
+  font-size: 3em;
+}
+
+.output {
+  display: flex;
+  justify-content: flex-end;
+  height: 10vh;
+  font-size: 3em;
+}
+
+.calc-buttons {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(6, 1fr);
+  margin: 0 10%;
+}
