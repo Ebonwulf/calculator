@@ -9,16 +9,18 @@ h1 {
   font-size: 3em;
 }
 
-.output {
-  display: flex;
-  justify-content: flex-end;
-  height: 10vh;
-  font-size: 3em;
-}
-
 .calc-buttons {
+  height: 60vh;
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  grid-template-rows: repeat(6, 1fr);
+  grid-template-rows: repeat(7, 1fr);
+  margin: 0 10%;
+}
+
+.display {
+  grid-column: 1/-1;
+  width: 100%;
+  height: 100%;
+  font-size: 2.5em;
   margin: 0 10%;
 }
