@@ -10,32 +10,35 @@
   <body>
     <h1>Calculator</h1>
     <div class="calculator">
-      <div class="display">0</div>
+      <div class="display">
+        <div class="previous-operand">1</div>
+        <div class="current-operand">0</div>
+      </div>
       <div class="calc-buttons">
-        <button class="button" data-operation="%">%</button>
-        <button class="button" data-all-clear="CE">CE</button>
-        <button class="button" data-delete="C">C</button>
-        <button class="button" data-delete="<-"><-</button>
-        <button class="button" data-operation="1/x">1/x</button>
-        <button class="button" data-operation="x2">x2</button>
-        <button class="button" data-operation="2/x">2/x</button>
-        <button class="button" data-operation="/">/</button>
-        <button class="button" data-number="7" value="7">7</button>
-        <button class="button" data-number="8" value="8">8</button>
-        <button class="button" data-number="9" value="9">9</button>
-        <button class="button" data-operation="*">*</button>
-        <button class="button" data-number="4" value="4">4</button>
-        <button class="button" data-number="5" value="5">5</button>
-        <button class="button" data-number="6" value="6">6</button>
-        <button class="button" data-operation="-">-</button>
-        <button class="button" data-number="1" value="1">1</button>
-        <button class="button" data-number="2" value="2">2</button>
-        <button class="button" data-number="3" value="3">3</button>
-        <button class="button" data-operation="+">+</button>
-        <button class="button" data-operation="+/-">+/-</button>
-        <button class="button" data-number="7" value="0">0</button>
-        <button class="button" data-number="7" value=".">.</button>
-        <button class="button" data-equals="=" value="=">.</button>
+        <button class="button" data-action="percent">%</button>
+        <button class="button" data-action="clear-all">CE</button>
+        <button class="button" data-action="clear">C</button>
+        <button class="button" data-action="delete"><-</button>
+        <button class="button" data-action="1/x">1/x</button>
+        <button class="button" data-action="x2">x2</button>
+        <button class="button" data-action="2/x">2/x</button>
+        <button class="button" data-action="divide">/</button>
+        <button class="num-button" value="7">7</button>
+        <button class="num-button" value="8">8</button>
+        <button class="num-button" value="9">9</button>
+        <button class="button" data-action="multiply">*</button>
+        <button class="num-button" value="4">4</button>
+        <button class="num-button" value="5">5</button>
+        <button class="num-button" value="6">6</button>
+        <button class="button" data-action="subtract">-</button>
+        <button class="num-button" value="1">1</button>
+        <button class="num-button" value="2">2</button>
+        <button class="num-button" value="3">3</button>
+        <button class="button" data-action="add">+</button>
+        <button class="button" data-action="+/-">+/-</button>
+        <button class="num-button" value="0">0</button>
+        <button class="button" data-action="decimal" value=".">.</button>
+        <button class="button" data-action="equals" value="=">.</button>
       </div>
     </div>
 
