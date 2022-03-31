@@ -29,8 +29,7 @@ buttons.forEach((button) => {
         action === '1/x' ||
         action === '2/x' ||
         action === '+/-' ||
-        action === 'C' ||
-        action === 'CE'
+        action === 'C'
       ) {
         previousOutput.textContent = displayedNum;
         display.textContent = action;
@@ -41,6 +40,10 @@ buttons.forEach((button) => {
       if (action === '=') {
         display.textContent =
           parseFloat(previousOutput.textContent) + parseFloat(displayedNum);
+      }
+      if (action === 'CE') {
+        display.textContent = 0;
+        previousOutput.textContent = 0;
       }
     }
   });
