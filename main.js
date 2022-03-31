@@ -23,7 +23,6 @@ buttons.forEach((button) => {
         action === '-' ||
         action === '*' ||
         action === '/' ||
-        action === '=' ||
         action === '<-' ||
         action === '%' ||
         action === 'x2' ||
@@ -38,6 +37,10 @@ buttons.forEach((button) => {
       }
       if (action === '.') {
         display.textContent = displayedNum + '.';
+      }
+      if (action === '=') {
+        display.textContent =
+          parseFloat(previousOutput.textContent) + parseFloat(displayedNum);
       }
     }
   });
