@@ -22,13 +22,14 @@ h1 {
   align-items: flex-end;
   justify-content: space-around;
   flex-direction: column;
-  height: 10vh;
+  height: 15vh;
   font-size: 2.5em;
   margin: 0 10%;
 }
 
-.output {
+.output,
+.previous-operand {
   width: 100%;
-  height: 100%;
-  font-size: 2em;
+  height: 50%;
+  font-size: 1.5em;
 }

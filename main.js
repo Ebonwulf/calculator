@@ -1,6 +1,7 @@
 const calculator = document.querySelector('.calculator');
 const buttons = document.querySelectorAll('.button');
 const display = document.querySelector('.output');
+const previousOutput = document.querySelector('.previous-operand');
 // let displayedNum = display.textContent;
 //button responses when pressed
 //number buttons
@@ -12,8 +13,7 @@ buttons.forEach((button) => {
       //displaying more than one number
       let displayedNum = display.textContent;
       const action = e.target.dataset.action;
-      const previousKeyType = calculator.dataset.previousKeyType;
-      if (displayedNum === '0' || previousKeyType === 'operator') {
+      if (displayedNum === '0') {
         display.textContent = value;
       } else {
         display.textContent = displayedNum + value;
@@ -23,9 +23,8 @@ buttons.forEach((button) => {
         action === '-' ||
         action === '*' ||
         action === '/' ||
-        // action === '=' ||
+        action === '=' ||
         action === '<-' ||
-        // action === '.' ||
         action === '%' ||
         action === 'x2' ||
         action === '1/x' ||
@@ -34,33 +33,11 @@ buttons.forEach((button) => {
         action === 'C' ||
         action === 'CE'
       ) {
+        previousOutput.textContent = displayedNum;
         display.textContent = action;
-        // console.log('operator key');
       }
       if (action === '.') {
         display.textContent = displayedNum + '.';
-      }
-      const calculate = (n1, actions, n2) => {
-        let result = '';
-
-        if (actions === '+') {
-          result = parseFloat(n1) + parseFloat(n2);
-        } else if (actions === '-') {
-          result = n1 - n2;
-        } else if (actions === '*') {
-          result = n1 * n2;
-        } else if (actions === '/') {
-          result = n1 / n2;
-        }
-        console.log(result);
-        return result;
-      };
-      if (action === '=') {
-        const firstValue = calculator.dataset.value;
-        const actions = calculator.dataset.actions;
-        const secondValue = displayedNum;
-
-        display.textContent = calculate(firstValue, actions, secondValue);
       }
     }
   });
