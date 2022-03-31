@@ -48,3 +48,13 @@ buttons.forEach((button) => {
     }
   });
 });
+
+const multiply = () => {
+  display.textContent =
+    parseFloat(previousOutput.textContent) * parseFloat(displayedNum);
+};
+
+const divide = () => {
+  display.textContent =
+    parseFloat(previousOutput.textContent) / parseFloat(displayedNum);
+};
