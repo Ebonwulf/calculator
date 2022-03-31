@@ -23,13 +23,11 @@ buttons.forEach((button) => {
         action === '-' ||
         action === '*' ||
         action === '/' ||
-        action === '<-' ||
         action === '%' ||
         action === 'x2' ||
         action === '1/x' ||
         action === '2/x' ||
-        action === '+/-' ||
-        action === 'C'
+        action === '+/-'
       ) {
         previousOutput.textContent = displayedNum;
         display.textContent = action;
@@ -44,6 +42,9 @@ buttons.forEach((button) => {
       if (action === 'CE') {
         display.textContent = 0;
         previousOutput.textContent = 0;
+      }
+      if (action === 'C' || action === '<-') {
+        display.textContent = parseFloat(display.textContent.length - 1);
       }
     }
   });
