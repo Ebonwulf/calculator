@@ -3,7 +3,7 @@ const buttons = document.querySelectorAll('.button');
 const display = document.querySelector('.output');
 const previousOutput = document.querySelector('.previous-operand');
 let operator = '';
-let result = '';
+// let result = '';
 
 // button responses when pressed
 // number buttons
@@ -69,7 +69,12 @@ buttons.forEach((button) => {
         display.textContent = 0;
       }
       if (action === '<-') {
-        display.textContent.slice(0, display.textContent.length - 1);
+        displayedNum = display.textContent.substring(
+          0,
+          display.textContent.length - 1
+        );
+        console.log(displayedNum);
+        return displayedNum;
       }
       if (action === '=' && operator === '%') {
         display.textContent =
