@@ -65,8 +65,11 @@ buttons.forEach((button) => {
         display.textContent = 0;
         previousOutput.textContent = 0;
       }
-      if (action === 'C' || action === '<-') {
-        display.textContent = display.textContent.length -= 1;
+      if (action === 'C') {
+        display.textContent = 0;
+      }
+      if (action === '<-') {
+        display.textContent.slice(0, display.textContent.length - 1);
       }
       if (action === '=' && operator === '%') {
         display.textContent =
