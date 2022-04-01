@@ -2,6 +2,10 @@ body {
   background-color: rgba(104, 70, 134, 0.808);
 }
 
+h1 {
+  font-family: $title-font;
+}
+
 .display {
   background-color: rgba(0, 0, 0, 0.815);
   color: aliceblue;
@@ -15,6 +19,7 @@ body {
   background-color: rgba(240, 255, 255, 0.753);
   border: 1px solid black;
   font-size: 2em;
+  font-family: $button-font;
 }
 .button:hover {
   background-color: rgb(218, 253, 253);

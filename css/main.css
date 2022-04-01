@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css2?family=Permanent+Marker&family=Roboto:wght@900&display=swap");
 * {
   margin: 0;
   padding: 0;
@@ -6,6 +7,10 @@
 
 body {
   background-color: rgba(104, 70, 134, 0.808);
+}
+
+h1 {
+  font-family: "Permanent Marker";
 }
 
 .display {
@@ -21,6 +26,7 @@ body {
   background-color: rgba(240, 255, 255, 0.753);
   border: 1px solid black;
   font-size: 2em;
+  font-family: "Roboto";
 }
 
 .button:hover {
@@ -28,10 +34,35 @@ body {
 }
 
 h1 {
+  margin-left: 25%;
   margin-top: 2%;
   height: 10vh;
   text-align: center;
-  font-size: 3em;
+  font-size: 3.4em;
+}
+
+body {
+  height: 100%;
+}
+
+header {
+  height: 15vh;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  background: url(/images/wolf-banner-2.jpg);
+  background-size: cover;
+}
+
+.symbols {
+  height: 100%;
+  width: 15%;
+}
+
+.calculator {
+  height: 85vh;
+  width: 60%;
+  margin-left: 20%;
 }
 
 .calc-buttons {

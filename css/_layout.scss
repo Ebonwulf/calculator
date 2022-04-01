@@ -1,8 +1,31 @@
 h1 {
+  margin-left: 25%;
   margin-top: 2%;
   height: 10vh;
   text-align: center;
-  font-size: 3em;
+  font-size: 3.4em;
+}
+body {
+  height: 100%;
+}
+header {
+  height: 15vh;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  background: url(/images/wolf-banner-2.jpg);
+  background-size: cover;
+}
+
+.symbols {
+  height: 100%;
+  width: 15%;
+}
+
+.calculator {
+  height: 85vh;
+  width: 60%;
+  margin-left: 20%;
 }
 
 .calc-buttons {
