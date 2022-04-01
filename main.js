@@ -29,12 +29,12 @@ buttons.forEach((button) => {
         action === '/' ||
         action === '%'
       ) {
-        //store previous output and the action
         operator = action;
         previousOutput.textContent = displayedNum;
         display.textContent = 0;
       }
-      if (action === '.') {
+      //decimal restricted to one
+      if (action === '.' && !display.textContent.includes('.')) {
         display.textContent = displayedNum + '.';
       }
       if (action === '=' && operator === '+') {
