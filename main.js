@@ -74,7 +74,7 @@ buttons.forEach((button) => {
           display.textContent.length - 1
         );
         console.log(displayedNum);
-        return displayedNum;
+        display.textContent = displayedNum;
       }
       if (action === '=' && operator === '%') {
         display.textContent =
