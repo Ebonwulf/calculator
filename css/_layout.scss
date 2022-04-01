@@ -24,6 +24,8 @@ h1 {
 }
 .output,
 .previous-operand {
+  word-wrap: break-word;
+  word-break: break-all;
   width: 100%;
   height: 50%;
   font-size: 1.5em;
