@@ -73,8 +73,10 @@ buttons.forEach((button) => {
           0,
           display.textContent.length - 1
         );
-        console.log(displayedNum);
         display.textContent = displayedNum;
+        if (display.textContent === '') {
+          display.textContent = 0;
+        }
       }
       if (action === '=' && operator === '%') {
         display.textContent =
