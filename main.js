@@ -81,13 +81,17 @@ buttons.forEach((button) => {
           (previousOutput.textContent * display.textContent) / 100;
         return display.textContent;
       }
-      if (action === '1/x' || action === '2/x' || action === '+/-') {
+      if (action === '1/x' || action === '+/-') {
         display.textContent = `Don't be silly, this button doesn't work!`;
       }
       if (action === 'x2') {
         display.textContent =
           parseFloat(display.textContent) * parseFloat(display.textContent);
         return display.textContent;
+      }
+      if (action === '2/x') {
+        displayedNum = Math.sqrt(parseFloat(display.textContent));
+        display.textContent = displayedNum;
       }
     }
   });
