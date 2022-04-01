@@ -37,7 +37,6 @@ buttons.forEach((button) => {
       if (action === '.') {
         display.textContent = displayedNum + '.';
       }
-
       if (action === '=' && operator === '+') {
         display.textContent =
           parseFloat(previousOutput.textContent) +
@@ -67,9 +66,20 @@ buttons.forEach((button) => {
         previousOutput.textContent = 0;
       }
       if (action === 'C' || action === '<-') {
-        display.textContent = parseFloat(
-          (displayedNum = display.textContent.length - 1)
-        );
+        display.textContent = display.textContent.length -= 1;
+      }
+      if (action === '=' && operator === '%') {
+        display.textContent =
+          (previousOutput.textContent * display.textContent) / 100;
+        return display.textContent;
+      }
+      if (action === '1/x' || action === '2/x' || action === '+/-') {
+        display.textContent = `Don't be silly, this button doesn't work!`;
+      }
+      if (action === 'x2') {
+        display.textContent =
+          parseFloat(display.textContent) * parseFloat(display.textContent);
+        return display.textContent;
       }
     }
   });
