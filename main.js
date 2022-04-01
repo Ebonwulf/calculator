@@ -83,7 +83,7 @@ buttons.forEach((button) => {
           (previousOutput.textContent * display.textContent) / 100;
         return display.textContent;
       }
-      if (action === '1/x' || action === '+/-') {
+      if (action === '+/-') {
         display.textContent = `Don't be silly, this button doesn't work!`;
       }
       if (action === 'x2') {
@@ -94,6 +94,10 @@ buttons.forEach((button) => {
       if (action === '2/x') {
         displayedNum = Math.sqrt(parseFloat(display.textContent));
         display.textContent = displayedNum;
+      }
+      if (action === '1/x') {
+        display.textContent = 1 / parseFloat(display.textContent);
+        return display.textContent;
       }
     }
   });
