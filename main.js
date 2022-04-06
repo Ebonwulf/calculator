@@ -23,9 +23,9 @@ buttons.forEach((button) => {
         }
       }
       if (
-        action === '+' ||
+        action === 'add' ||
         action === '-' ||
-        action === '*' ||
+        action === 'multiply' ||
         action === '/' ||
         action === '%'
       ) {
@@ -34,28 +34,28 @@ buttons.forEach((button) => {
         display.textContent = 0;
       }
       //decimal restricted to one
-      if (action === '.' && !display.textContent.includes('.')) {
+      if (action === 'decimal' && !display.textContent.includes('.')) {
         display.textContent = displayedNum + '.';
       }
-      if (action === '=' && operator === '+') {
+      if (action === 'equals' && operator === 'add') {
         display.textContent =
           parseFloat(previousOutput.textContent) +
           parseFloat(display.textContent);
         return display.textContent;
       }
-      if (action === '=' && operator === '-') {
+      if (action === 'equals' && operator === '-') {
         display.textContent =
           parseFloat(previousOutput.textContent) -
           parseFloat(display.textContent);
         return display.textContent;
       }
-      if (action === '=' && operator === '/') {
+      if (action === 'equals' && operator === '/') {
         display.textContent =
           parseFloat(previousOutput.textContent) /
           parseFloat(display.textContent);
         return display.textContent;
       }
-      if (action === '=' && operator === '*') {
+      if (action === 'equals' && operator === 'multiply') {
         display.textContent =
           parseFloat(previousOutput.textContent) *
           parseFloat(display.textContent);
@@ -78,7 +78,7 @@ buttons.forEach((button) => {
           display.textContent = 0;
         }
       }
-      if (action === '=' && operator === '%') {
+      if (action === 'equals' && operator === '%') {
         display.textContent =
           (previousOutput.textContent * display.textContent) / 100;
         return display.textContent;
